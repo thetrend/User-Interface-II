@@ -7,6 +7,27 @@
 /* Apply universal font */
 * { font-family: 'Lato', sans-serif; }
 
+/* Universal Button Styles */
+button {
+  margin: 10px;
+  padding: 20px;
+  background-color: var(--red);
+  color: var(--cream);
+  border: 0;
+}
+
+button:hover, button:active,
+button > *:hover, button > *:active {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+button > a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 /* 
   Color Palette Credit
   https://www.colourlovers.com/palette/4789656/
@@ -29,7 +50,7 @@ body {
   color: var(--black);
   margin: 0;
   display: flex;
-  width: 100vw;
+  width: 100%;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
@@ -115,9 +136,13 @@ main {
 
 #blurb > aside {
   margin: auto;
-  text-align: justify;
+  text-align: center;
   padding: 2%;
   font-size: x-large;
+}
+
+#blurb > aside > p {
+  text-align: justify;
 }
 
 #blurb > aside > h2 {
@@ -128,7 +153,6 @@ main {
   text-transform: uppercase;
   font-size: xx-large;
 }
-
 
 #blurb > aside > h2:hover {
   background-color: var(--yellow);
@@ -176,11 +200,33 @@ footer {
   color: var(--cream);
   width: 100%;
   margin-top: 10vh;
+  padding-top: 5vh;
   margin: 0 auto;
+}
+
+footer > h3 {
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5vw;
 }
 
 footer > ul {
   padding-inline-start: 0;
+  display: flex;
+  align-items: stretch;
+  align-content: center;
+  justify-items: stretch;
+  justify-content: center;
+  list-style-type: none;
+}
+
+footer > ul > li {
+  font-size: xx-large;
+}
+
+button > a {
+  color: inherit;
 }
 /* END FOOTER STYLES */
 
