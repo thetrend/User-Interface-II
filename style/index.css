@@ -1,1 +1,311 @@
-/* Add CSS styling here */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap');
+
+/* Resetting with Normalize */
+@import './normalize.css';
+
+/* Apply universal font */
+* { font-family: 'Lato', sans-serif; }
+
+/* Universal Button Styles */
+button {
+  margin: 10px;
+  padding: 20px;
+  background-color: var(--red);
+  color: var(--cream);
+  border: 0;
+}
+
+button:hover, button:active,
+button > *:hover, button > *:active {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+button > a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 
+  Color Palette Credit
+  https://www.colourlovers.com/palette/4789656/
+*/
+:root {
+  --cream: #FFF7F0;
+  --yellow: #F4C833;
+  --blue: #0395D0;
+  --red: #D31716;
+  --black: #12090A;
+  --gray: #FFFDFC;
+}
+
+/* Making images responsive */
+img { width: 100%; }
+
+/* Body Tag Styles */
+body {
+  background-color: var(--cream);
+  color: var(--black);
+  margin: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: flex-end;
+}
+
+/* BEGIN HEADER STYLES */
+header {
+  margin: 2vh auto;
+  width: 95%;
+}
+
+header > h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 2%;
+  border-left: 20px solid var(--black);
+}
+
+header > h1:hover {
+  background-color: var(--yellow);
+}
+
+header > nav {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+header > nav > a {
+  padding: 20px;
+  margin: 10px;
+  color: var(--blue);
+  text-decoration: none;
+  font-size: x-large;
+}
+
+header > nav > a:hover,
+header > nav > a:active {
+  background: var(--red);
+  color: var(--cream);
+  text-decoration: uppercase;
+}
+/* END HEADER STYLES */
+
+/* BEGIN MAIN STYLES */
+main {
+  margin: auto;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+#blurb {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+#blurb > img {
+  max-width: 40%;
+  border-radius: 50%;
+  height: 100%;
+  margin: auto;
+}
+
+#blurb > aside {
+  margin: auto;
+  text-align: center;
+  padding: 2%;
+  font-size: x-large;
+}
+
+#blurb > aside > p {
+  text-align: justify;
+}
+
+#blurb > aside > h2 {
+  font-weight: 900;
+  text-align: right;
+  padding: 2%;
+  border-right: 20px solid var(--black);
+  text-transform: uppercase;
+  font-size: 5rem;
+}
+
+#blurb > aside > h2:hover {
+  background-color: var(--yellow);
+}
+
+/* END MAIN STYLES */
+
+/* BEGIN GALLERY SECTION STYLES */
+section#gallery {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 2vh;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  width: 23%;
+  margin: 4vh 0.5vw;
+  justify-content: space-evenly;
+}
+
+figure > img {
+  width: 100%;
+}
+
+figure > figcaption::before {
+  content: 'Project ';
+}
+
+figure > figcaption {
+  font-size: xx-large;
+}
+/* END GALLERY SECTION STYLES */
+
+/* BEGIN FOOTER STYLES */
+footer {
+  background-color: var(--black);
+  color: var(--cream);
+  width: 100%;
+  margin-top: 10vh;
+  padding-top: 5vh;
+  margin: 0 auto;
+}
+
+footer > h3 {
+  font-size: large;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5vw;
+}
+
+footer > ul {
+  padding-inline-start: 0;
+  display: flex;
+  align-items: stretch;
+  align-content: center;
+  justify-items: stretch;
+  justify-content: center;
+  list-style-type: none;
+}
+
+footer > ul > li {
+  font-size: xx-large;
+}
+
+button > a {
+  color: inherit;
+}
+/* END FOOTER STYLES */
+
+/* Day 2 Project */
+/* Apply Responsive Text Styles to HTML */
+html {
+  font-size: 62.5%;
+}
+/* Media Query: Screen Format with max width of 800px */
+@media only screen and (max-width: 800px) {
+  /* Modifying header elements and children */
+  header {
+    margin: 2vh auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  /* Make the header text fit on one line */
+  header > h1 {
+    font-size: 6rem;
+  }
+
+  header > nav {
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    justify-content: center;
+    width: 80%;
+  }
+
+  header > nav > a {
+    margin: 0 auto;
+    padding: 5px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  /* End Header style modifications */
+  /* Blurb Section */
+  #blurb {
+    flex-flow: column nowrap;
+    margin-top: 2vh;
+    width: 80%;
+  }
+
+  #blurb > img {
+    max-width: 80%;
+    height: auto;
+  }
+
+  #blurb > aside > h2 {
+    font-size: 4rem;
+  }
+  /* End Blurb Style Modifications */
+  /* Gallery Section */
+  section#gallery {
+    margin-top: 5vh;
+  }
+
+  figure {
+    width: 41%;
+    margin: 4vh 4vw;
+  }
+  /* End Gallery Style Modifications */
+  /* Footer Section */
+  footer {
+    padding: 2.5vh 0 1vh 0;
+  }
+  footer > ul > li {
+    font-size: xx-large;
+  }
+  /* End Footer Style Modifications */
+}
+/* Media Query: Screen Format with max width of 500px */
+/* 
+Only the font sizes need to be resized because everything
+else is inherited from the above media query
+ */
+@media only screen and (max-width: 500px) {
+  header > h1 {
+    font-size: 4rem;
+  }
+
+  #blurb > aside > h2 {
+    font-size: 2.5rem;
+  }
+
+  footer > ul > li {
+    font-size: x-large;
+  }
+}
