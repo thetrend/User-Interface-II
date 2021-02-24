@@ -224,3 +224,69 @@ button > a {
 html {
   font-size: 62.5%;
 }
+/* Media Query: Screen Format with max width of 800px */
+@media only screen and (max-width: 800px) {
+  /* Modifying header elements and children */
+  header {
+    margin: 2vh auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  /* Make the header text fit on one line */
+  header > h1 {
+    font-size: 6rem;
+  }
+
+  header > nav {
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    justify-content: center;
+    width: 80%;
+  }
+
+  header > nav > a {
+    margin: 0 auto;
+    padding: 5px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  /* End Header style modifications */
+  /* Blurb Section */
+  #blurb {
+    flex-flow: column nowrap;
+    margin-top: 2vh;
+    align-items: center;
+    width: 80%;
+  }
+
+  #blurb > img {
+    width: 80%;
+    height: auto;
+  }
+
+  #blurb > aside > h2 {
+    font-size: 4rem;
+  }
+  /* End Blurb Style Modifications */
+  /* Gallery Section */
+  section#gallery {
+    margin-top: 5vh;
+  }
+
+  figure {
+    width: 41%;
+    margin: 4vh 4vw;
+  }
+  /* End Gallery Style Modifications */
+  /* Footer Section */
+  footer {
+    padding: 2.5vh 0 1vh 0;
+  }
+  footer > ul > li {
+    font-size: xx-large;
+  }
+  /* End Footer Style Modifications */
+}
