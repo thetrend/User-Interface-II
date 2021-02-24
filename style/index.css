@@ -118,8 +118,10 @@ main {
 }
 
 #blurb > img {
-  width: 40%;
+  max-width: 40%;
   border-radius: 50%;
+  height: 100%;
+  margin: auto;
 }
 
 #blurb > aside {
@@ -258,12 +260,11 @@ html {
   #blurb {
     flex-flow: column nowrap;
     margin-top: 2vh;
-    align-items: center;
     width: 80%;
   }
 
   #blurb > img {
-    width: 80%;
+    max-width: 80%;
     height: auto;
   }
 
